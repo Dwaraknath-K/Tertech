@@ -2,12 +2,28 @@
 <html>
   <head>
       <title> TERTECH </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="shortcut icon" type="image/x-icon" href = "icon.png">
       <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
     <link href = "tertech.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <header>
+    <div class="ham">
+    <div id="mySidebar" class="sidebar">
+    <span class="closebtn" onclick="closeNav()">x</span>
+    <a href="#" onclick="closeNav()" class="home">HOME</a>
+    <a href="#" onclick="closeNav()">TECH FACTS</a>
+    <a href="#" onclick="closeNav()">TECH VIDEOS</a>
+    <a href ="#" onclick="closeNav()">CONTACT</a>
+    <a href="#" onclick="closeNav()">ABOUT</a>
+  </div>
+  <div id="mainmob">
+    <span class="openbtn" onclick="openNav()">☰</span>
+    <span class = "logoo">
+      <img src="icon.png">
+    </span>
+  </div>
+    </div>
       <div class = "main">
         <div class = "logo">
           <img src="icon.png">
@@ -27,6 +43,7 @@
           <a href="" class = "bn">LEARN MORE</a>
           <a href="" class = "bn">EXPLORE</a>
         </div>
-    </header>
+        <script src="tert.js">
+        </script>
   </body>
 </html>
