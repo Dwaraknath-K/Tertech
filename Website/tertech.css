@@ -1,4 +1,8 @@
-
+body
+{
+  font-family: abel;
+  margin:0px;
+}
 header
 {
   background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(1.jpg);
@@ -52,6 +56,7 @@ ul .active a{
 .title h1
 {
   color : #fff;
+  font-family: abel;
   font-size: 100px;
 }
 .button
