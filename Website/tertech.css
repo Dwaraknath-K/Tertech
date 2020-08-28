@@ -2,48 +2,68 @@ body
 {
   font-family: abel;
   margin:0px;
-}
-header
-{
-  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(1.jpg);
-  height : 100vh;
-  background-size : cover;
+  background:url("1.jpg");
   background-position: center;
 }
-ul{
-  float: right;
-  list-style-type: none;
-  margin-top: 25px;
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.7);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 80px;
 }
-ul li
-{
-  display: inline-block;
-}
-ul li a{
+
+.sidebar a {
+  display: block;
+  padding: 20px;
+  text-align: center;
   text-decoration: none;
-  color : #fff;
-  padding : 5px 20px;
-  border : 1px solid transparent;
-  transition : 0.6s ease;
+  font-size: 20px;
+  color: #818181;
+  transition: 0.3s;
+  border-bottom: 1px solid #818181
 }
-ul li a:hover
+.sidebar a:hover ,.sidebar a:active{
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  color: #f1f1f1;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  font-size: 25px;
+  margin-left: 60px;
+}
+
+.openbtn {
+    position: absolute;
+    top: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  color: black;
+  padding: 10px 0px 0px 15px ;
+  border: none;
+  clear: both;
+}
+#mainmob {
+  transition: margin-left .5s;
+  padding: 80px 16px 16px 16px;
+}
+.main
 {
-  background-color: #fff;
-  color: #000;
+  display:none;
 }
-ul .active a{
-  background-color: #fff;
-  color:#000;
-}
-.logo img
-{
-  float : left;
-  width : 150px;
-  height : auto;
-}
-.main{
-  max-width: 1500px;
-  margin:auto;
+.logoo img{
+  position: absolute; 
+  width:60px;
+  top:10px;
+  right:10px;
 }
 .title
 {
@@ -54,6 +74,77 @@ ul .active a{
   font-family: serif;
 }
 .title h1
+{
+  color : #fff;
+  font-family: abel;
+  font-size:50px;
+}
+.button
+{
+  position:absolute;
+  top:65%;
+  left: 48%;
+  transform : translate(-50%,-50%);
+}
+.bn
+{
+  border : 1px solid #fff;
+  padding: 10px 10px;
+  margin:1px;
+  color:#fff;
+  text-decoration: none;
+  transition: 0.6s ease;
+}
+.bn:hover{
+  background-color: #fff;
+  color : #000;
+}
+@media only screen and (min-width: 768px) {
+  .logo img
+  {
+    position: absolute;
+    top:10px;
+    left: 10px;
+    width : 60px;
+    height : auto;
+  }
+  body{
+    background:url("1.jpg");
+    background-size: cover;
+  }
+  .ham{
+    display: none;
+  }
+  .main{
+    display: block;
+  }
+  ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+  }
+  ul li
+  {
+    display: inline;
+  }
+  ul li a{
+    text-decoration: none;
+    color : #fff;
+    padding : 5px 20px;
+    border : 1px solid transparent;
+    transition : 0.6s ease;
+  }
+  ul li a:hover
+  {
+    background-color: #fff;
+    color: #000;
+  }
+  ul .active a{
+    background-color: #fff;
+    color:#000;
+  }
+
+  .title h1
 {
   color : #fff;
   font-family: abel;
@@ -74,7 +165,6 @@ ul .active a{
   text-decoration: none;
   transition: 0.6s ease;
 }
-.bn:hover{
-  background-color: #fff;
-  color : #000;
+
+
 }
